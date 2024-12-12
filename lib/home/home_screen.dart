@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
       {required int index, required String imagePath}) {
     return selectedIndex == index
         ? Container(
-            padding: EdgeInsets.symmetric(vertical: 6, horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(66),
               color: MyAppColor.blackBgColor,
