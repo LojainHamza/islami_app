@@ -11,5 +11,7 @@ class MyThemeData {
         showUnselectedLabels: false,
         //backgroundColor: MyAppColor.goldColor,
         //type: BottomNavigationBarType.fixed,
-      ));
+    ),
+    bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.transparent),
+  );
 }

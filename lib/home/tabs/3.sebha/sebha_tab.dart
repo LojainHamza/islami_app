@@ -112,7 +112,7 @@ class _SebhaTabState extends State<SebhaTab> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-              ),
+                  color: MyAppColor.blackBgColor),
             ),
           ),
         ),
