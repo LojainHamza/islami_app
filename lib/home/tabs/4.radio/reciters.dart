@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/my_app_color.dart';
 
-class RecitersUI extends StatefulWidget {
-  const RecitersUI({super.key});
+class RecitersView extends StatefulWidget {
+  const RecitersView({super.key});
 
   @override
   _RecitersUIState createState() => _RecitersUIState();
 }
 
-class _RecitersUIState extends State<RecitersUI> {
+class _RecitersUIState extends State<RecitersView> {
   @override
   Widget build(BuildContext context) {
     return ListView(

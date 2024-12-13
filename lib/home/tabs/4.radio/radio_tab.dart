@@ -49,8 +49,8 @@ class _RadioTabState extends State<RadioTab> {
               const Expanded(
                 child: TabBarView(
                   children: [
-                    RadioUI(),
-                    RecitersUI(),
+                    RadioView(),
+                    RecitersView(),
                   ],
                 ),
               ),

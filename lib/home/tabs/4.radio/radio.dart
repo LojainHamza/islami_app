@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/my_app_color.dart';
 
-class RadioUI extends StatefulWidget {
-  const RadioUI({super.key});
+class RadioView extends StatefulWidget {
+  const RadioView({super.key});
 
   @override
   _RadioUIState createState() => _RadioUIState();
 }
 
-class _RadioUIState extends State<RadioUI> {
+class _RadioUIState extends State<RadioView> {
   @override
   Widget build(BuildContext context) {
     return ListView(
