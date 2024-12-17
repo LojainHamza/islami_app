@@ -40,11 +40,13 @@ class _RadioTabState extends State<RadioTab> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   indicatorSize: TabBarIndicatorSize.tab,
-                  tabs: const [
+                    indicatorColor: Colors.transparent,
+                    tabs: const [
                     Tab(text: 'Radio'),
                     Tab(text: 'Reciters'),
                   ],
-                ),
+                    overlayColor:
+                        const WidgetStatePropertyAll(Colors.transparent)),
               ),
               const Expanded(
                 child: TabBarView(

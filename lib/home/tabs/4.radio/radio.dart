@@ -34,10 +34,15 @@ class _RadioUIState extends State<RadioView> {
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: MyAppColor.goldColor,
-            image: const DecorationImage(
-              image: AssetImage('assets/images/radio_background.png'),
+            image: isPlaying == false
+                ? const DecorationImage(
+                    image: AssetImage('assets/images/radio_background.png'),
               fit: BoxFit.cover,
-            ),
+                  )
+                : const DecorationImage(
+                    image: AssetImage('assets/images/soundWave.png'),
+                    fit: BoxFit.cover,
+                    opacity: 0.4),
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(

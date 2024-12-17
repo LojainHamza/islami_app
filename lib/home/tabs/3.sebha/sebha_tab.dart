@@ -58,19 +58,28 @@ class _SebhaTabState extends State<SebhaTab> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
+                    Positioned(
+                      top: -10,
+                      child: Image.asset(
+                        'assets/images/sebha_head.png',
+                        height: 100,
+                      ),
+                    ),
                     Transform.rotate(
                       angle: rotationAngle,
                       child: SizedBox(
-                        height: 400,
-                        width: 400,
-                        child: Image.asset('assets/images/Sebha.png',
-                            fit: BoxFit.contain),
+                        child: Image.asset(
+                          'assets/images/Sebha_body.png',
+                          width: 280,
+                          height: 280,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(height: 60),
+                        const SizedBox(height: 25),
                         Text(
                           tasbeehWord,
                           style: const TextStyle(
@@ -79,7 +88,7 @@ class _SebhaTabState extends State<SebhaTab> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 5),
                         Text(
                           '$counter',
                           style: const TextStyle(
@@ -112,7 +121,8 @@ class _SebhaTabState extends State<SebhaTab> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                  color: MyAppColor.blackBgColor),
+                color: MyAppColor.blackBgColor,
+              ),
             ),
           ),
         ),

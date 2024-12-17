@@ -16,7 +16,7 @@ class SuraListWidget extends StatelessWidget {
           children: [
             Image.asset('assets/images/vector_number_image.png'),
             Text(
-              '${suraModel.index + 1}',
+              '${suraModel.index}',
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 color: MyAppColor.whiteColor,
