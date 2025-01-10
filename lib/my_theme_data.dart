@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/my_app_color.dart';
+import 'package:islami_app/my_app_styles.dart';
 
 class MyThemeData {
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedItemColor: MyAppColor.whiteColor,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedItemColor: MyAppColor.whiteColor,
         showSelectedLabels: true,
         unselectedItemColor: MyAppColor.blackColor,
         showUnselectedLabels: false,
-        //backgroundColor: MyAppColor.goldColor,
+          selectedLabelStyle: MyAppStyles.bold16White
+          //backgroundColor: MyAppColor.goldColor,
         //type: BottomNavigationBarType.fixed,
     ),
     bottomSheetTheme:
@@ -20,5 +22,10 @@ class MyThemeData {
         iconTheme: IconThemeData(
           color: MyAppColor.goldColor,
         )),
-  );
+      textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+            color: MyAppColor.whiteColor,
+            fontSize: 16,
+            fontWeight: FontWeight.bold),
+      ));
 }

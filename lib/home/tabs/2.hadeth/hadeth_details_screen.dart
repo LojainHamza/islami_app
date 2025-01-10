@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/model/hadeth_model.dart';
 import 'package:islami_app/my_app_color.dart';
+import 'package:islami_app/my_app_styles.dart';
 
 class HadethDetailsScreen extends StatelessWidget {
   static const String routeName = 'hadethDetails';
@@ -25,8 +26,7 @@ class HadethDetailsScreen extends StatelessWidget {
               const SizedBox(height: 22),
               Text(
                 args.title,
-                style:
-                    const TextStyle(color: MyAppColor.goldColor, fontSize: 24),
+                style: MyAppStyles.bold24Gold,
               ),
               Expanded(
                 child: ListView.builder(
@@ -39,8 +39,7 @@ class HadethDetailsScreen extends StatelessWidget {
                         child: Text(
                           args.content[index],
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
-                              color: MyAppColor.goldColor, fontSize: 20),
+                          style: MyAppStyles.bold20Gold,
                         ),
                       );
                     }),

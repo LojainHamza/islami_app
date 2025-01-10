@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/my_app_color.dart';
+import 'package:islami_app/my_app_styles.dart';
 
 class SuraContentItem extends StatelessWidget {
   String content;
@@ -23,10 +24,7 @@ class SuraContentItem extends StatelessWidget {
         '$content [${index + 1}] ',
         textAlign: TextAlign.center,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-          fontSize: 18,
-          color: MyAppColor.goldColor,
-        ),
+        style: MyAppStyles.bold20Gold,
       ),
     );
   }

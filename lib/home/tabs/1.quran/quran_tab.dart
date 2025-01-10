@@ -3,6 +3,7 @@ import 'package:islami_app/home/tabs/1.quran/sura_details_screen.dart';
 import 'package:islami_app/home/tabs/1.quran/sura_list_widget.dart';
 import 'package:islami_app/model/sura_model.dart';
 import 'package:islami_app/my_app_color.dart';
+import 'package:islami_app/my_app_styles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class QuranTab extends StatefulWidget {
@@ -78,18 +79,14 @@ class _QuranTabState extends State<QuranTab> {
                     AssetImage('assets/images/icon_search.png'),
                     color: MyAppColor.goldColor),
                 hintText: "Sura Name",
-                hintStyle: const TextStyle(
-                    color: MyAppColor.whiteColor, fontWeight: FontWeight.bold)),
+                hintStyle: MyAppStyles.bold16White),
           ),
           const SizedBox(height: 20),
           searchText.isNotEmpty ? const SizedBox() : buildMostRecently(),
           const SizedBox(height: 10),
-          const Text(
-            'Sura List',
-            style: TextStyle(
-              color: MyAppColor.whiteColor,
-              fontWeight: FontWeight.bold,
-            ),
+          Text(
+            'Suras List',
+            style: MyAppStyles.bold16White,
           ),
           const SizedBox(height: 2),
           Expanded(
@@ -133,12 +130,9 @@ class _QuranTabState extends State<QuranTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Most Recently',
-          style: TextStyle(
-            color: MyAppColor.whiteColor,
-            fontWeight: FontWeight.bold,
-          ),
+          style: MyAppStyles.bold16White,
         ),
         const SizedBox(height: 10),
         Container(
@@ -153,20 +147,22 @@ class _QuranTabState extends State<QuranTab> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(lastSura['suraEnName'] ?? ''),
-                        Text(lastSura['suraArName'] ?? ''),
-                        Text('${lastSura['numVerses'] ?? ''} Verses'),
+                        Text(lastSura['suraEnName'] ?? '',
+                            style: MyAppStyles.bold24Black),
+                        Text(lastSura['suraArName'] ?? '',
+                            style: MyAppStyles.bold24Black),
+                        Text('${lastSura['numVerses'] ?? ''} Verses',
+                            style: MyAppStyles.bold16Black),
                       ],
                     ),
                     Image.asset('assets/images/most_recently_image.png'),
                   ],
                 )
-              : const Text(
-                  'Nothing to show',
-                  style: TextStyle(
-                      color: MyAppColor.blackColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
+              : Center(
+                  child: Text(
+                    'Nothing to show',
+                    style: MyAppStyles.bold24Black,
+                  ),
                 ),
         ),
       ],

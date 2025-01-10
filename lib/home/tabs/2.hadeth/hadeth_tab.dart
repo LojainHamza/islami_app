@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:islami_app/home/tabs/2.hadeth/hadeth_details_screen.dart';
 import 'package:islami_app/model/hadeth_model.dart';
 import 'package:islami_app/my_app_color.dart';
+import 'package:islami_app/my_app_styles.dart';
 
 class HadethTab extends StatefulWidget {
   @override
@@ -15,6 +16,14 @@ class _HadethTabState extends State<HadethTab> {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery
+        .of(context)
+        .size
+        .height;
+    var width = MediaQuery
+        .of(context)
+        .size
+        .width;
     if (hadethList.isEmpty) {
       loadHadethFile();
     }
@@ -26,10 +35,11 @@ class _HadethTabState extends State<HadethTab> {
                 ? const Center(
                     child: CircularProgressIndicator(
                     color: MyAppColor.goldColor,
-                  )) // Loading indicator
+                    )
+            ) // Loading indicator
                 : CarouselSlider.builder(
                     options: CarouselOptions(
-                      height: 450,
+                      height: height * 0.6,
                       viewportFraction: 0.75,
                       enlargeCenterPage: true,
                     ),
@@ -57,14 +67,13 @@ class _HadethTabState extends State<HadethTab> {
                             Text(
                               hadethList[itemIndex].title,
                               textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              style: MyAppStyles.bold24Black,
                             ),
                             Expanded(
                               child: Text(
                                 hadethList[itemIndex].content.join(''),
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(fontSize: 16),
+                                style: MyAppStyles.bold16Black,
                               ),
                             ),
                           ],
